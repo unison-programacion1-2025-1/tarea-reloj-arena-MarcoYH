@@ -1,7 +1,18 @@
-# En este archivo debes implementar la función
-
-def reloj_arena(m: int, s: str) -> str:
-    # TODO: validar altura mayor que 0 e imprimir "Error: La altura debe ser un entero positivo" y salir
+def reloj_arena(m, s):
+    # Dibujar la parte superior del reloj (triángulo decreciente)
+    for i in range(m):
+        # Calcular espacios y caracteres para cada línea
+        espacios = i
+        caracteres = 2 * (m - i) - 1
+        
+        # Imprimir línea: espacios + caracteres
+        print(" " * espacios + s * caracteres)
     
-    # TODO: implementar la lógica para generar el reloj de arena en ASCII
-    pass
+    # Dibujar la parte inferior del reloj (triángulo creciente)
+    for i in range(1, m):  # Comenzamos desde 1 hasta m-1
+        # Calcular espacios y caracteres para cada línea
+        espacios = m - i - 1
+        caracteres = 2 * (i + 1) - 1
+        
+        # Imprimir línea: espacios + caracteres
+        print(" " * espacios + s * caracteres)
