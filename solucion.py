@@ -1,4 +1,4 @@
-}def reloj_arena(m, s):
+def reloj_arena(m, s):
     # Dibujar la parte superior del reloj (triángulo decreciente)
     for i in range(m):
         # Calcular espacios y caracteres para cada línea
